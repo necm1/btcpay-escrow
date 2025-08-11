@@ -51,7 +51,7 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/btcpay-escrow-e2e/**/*"]
+      "exclude": ["apps/btcpay-escrow-e2e/**/*", "apps/api-e2e/**/*"]
     }
   ],
   "targetDefaults": {

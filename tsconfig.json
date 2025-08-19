@@ -5,6 +5,12 @@
   "references": [
     {
       "path": "./apps/api"
+    },
+    {
+      "path": "./apps/job-queue"
+    },
+    {
+      "path": "./packages/orm"
     }
   ]
 }

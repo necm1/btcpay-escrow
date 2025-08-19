@@ -1,5 +1,5 @@
 {
-  "name": "@escrow/api",
+  "name": "@escrow/job-queue",
   "version": "0.0.1",
   "private": true,
   "nx": {
@@ -28,15 +28,15 @@
           "build"
         ],
         "options": {
-          "buildTarget": "@escrow/api:build",
-          "runBuildTargetDependencies": true
+          "buildTarget": "@escrow/job-queue:build",
+          "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {
-            "buildTarget": "@escrow/api:build:development"
+            "buildTarget": "@escrow/job-queue:build:development"
           },
           "production": {
-            "buildTarget": "@escrow/api:build:production"
+            "buildTarget": "@escrow/job-queue:build:production"
           }
         }
       },
@@ -46,13 +46,5 @@
         }
       }
     }
-  },
-  "dependencies": {
-    "@nestjs/cache-manager": "^3.0.1",
-    "class-transformer": "^0.5.1",
-    "class-validator": "^0.14.2",
-    "nestjs-pino": "^4.4.0",
-    "pino-http": "^10.5.0",
-    "pino-pretty": "^13.1.1"
   }
 }

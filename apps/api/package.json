@@ -1,0 +1,58 @@
+{
+  "name": "@escrow/api",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "targets": {
+      "build": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "webpack-cli build",
+          "args": [
+            "--node-env=production"
+          ]
+        },
+        "configurations": {
+          "development": {
+            "args": [
+              "--node-env=development"
+            ]
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "executor": "@nx/js:node",
+        "defaultConfiguration": "development",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "buildTarget": "@escrow/api:build",
+          "runBuildTargetDependencies": true
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "@escrow/api:build:development"
+          },
+          "production": {
+            "buildTarget": "@escrow/api:build:production"
+          }
+        }
+      },
+      "test": {
+        "options": {
+          "passWithNoTests": true
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "@nestjs/cache-manager": "^3.0.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "nestjs-pino": "^4.4.0",
+    "pino-http": "^10.5.0",
+    "pino-pretty": "^13.1.1"
+  }
+}

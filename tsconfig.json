@@ -4,10 +4,16 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/btcpay-escrow-e2e"
+      "path": "./apps/api"
     },
     {
-      "path": "./apps/btcpay-escrow"
+      "path": "./apps/job-queue"
+    },
+    {
+      "path": "./packages/orm"
+    },
+    {
+      "path": "./packages/api-utils"
     }
   ]
 }

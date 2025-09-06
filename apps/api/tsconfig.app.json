@@ -22,6 +22,9 @@
   ],
   "references": [
     {
+      "path": "../../packages/api-utils/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/orm/tsconfig.lib.json"
     }
   ]

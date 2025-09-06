@@ -1,5 +1,5 @@
 {
-  "name": "@escrow/orm",
+  "name": "@escrow/api-utils",
   "version": "0.0.1",
   "private": true,
   "main": "./src/index.js",
@@ -15,10 +15,7 @@
     }
   },
   "dependencies": {
-    "class-transformer": "^0.5.1",
-    "pg": "^8.16.3",
-    "tslib": "^2.3.0",
-    "typeorm": "^0.3.26"
+    "tslib": "^2.3.0"
   },
   "nx": {
     "targets": {
@@ -28,18 +25,15 @@
           "{options.outputPath}"
         ],
         "options": {
-          "outputPath": "dist/packages/orm",
-          "tsConfig": "packages/orm/tsconfig.lib.json",
-          "packageJson": "packages/orm/package.json",
-          "main": "packages/orm/src/index.ts",
+          "outputPath": "dist/packages/api-utils",
+          "tsConfig": "packages/api-utils/tsconfig.lib.json",
+          "packageJson": "packages/api-utils/package.json",
+          "main": "packages/api-utils/src/index.ts",
           "assets": [
-            "packages/orm/*.md"
+            "packages/api-utils/*.md"
           ]
         }
       }
     }
-  },
-  "devDependencies": {
-    "@types/pg": "^8"
   }
 }

@@ -29,7 +29,7 @@
         ],
         "options": {
           "buildTarget": "@escrow/api:build",
-          "runBuildTargetDependencies": true
+          "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {
@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "@nestjs/cache-manager": "^3.0.1",
+    "@nestjs/config": "^4.0.2",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.2",
     "nestjs-pino": "^4.4.0",

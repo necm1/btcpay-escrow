@@ -4,7 +4,12 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "api:dev": "nx serve api"
+    "api:dev": "nx serve api",
+    "typeorm": "ts-node -r dotenv/config ./node_modules/typeorm/cli",
+    "orm:migrate": "npm run typeorm -- migration:generate ./apps/api/src/migrations/$npm_config_name -d ./packages/orm/src/typeorm.config.ts",
+    "orm:create": "npm run typeorm -- migration:create ./apps/api/src/migrations/$npm_config_name -- -d ./packages/orm/src/typeorm.config.ts",
+    "orm:run": "npm run typeorm migration:run -- -d ./packages/orm/src/typeorm.config.ts",
+    "orm:revert": "npm run typeorm migration:revert -- -d ./packages/orm/src/typeorm.config.ts"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.0",

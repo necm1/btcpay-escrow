@@ -4,6 +4,7 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { AppController } from './app.controller';
+import { ConfigModule } from '@nestjs/config';
 import { LoggerModule } from 'nestjs-pino';
 import { redisStore } from 'cache-manager-redis-yet';
 import { CacheModule } from '@nestjs/cache-manager';
@@ -11,6 +12,7 @@ import { RedisClientOptions } from 'redis';
 import { APP_FILTER, APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
 import { OrmModule } from '@escrow/orm';
 import { HttpExceptionFilter, ResponseInterceptor } from '@escrow/api-utils';
+import { resolve } from 'path';
 
 @Module({
   imports: [
@@ -35,6 +37,10 @@ import { HttpExceptionFilter, ResponseInterceptor } from '@escrow/api-utils';
       isGlobal: true,
     }),
     OrmModule,
+    ConfigModule.forRoot({
+      envFilePath: [resolve(__dirname, '../../../.env')],
+      isGlobal: true,
+    }),
   ],
   controllers: [AppController],
   providers: [

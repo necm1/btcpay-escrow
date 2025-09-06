@@ -1,11 +1,20 @@
 # api-utils
 
-This library was generated with [Nx](https://nx.dev).
+This is a shared library used by the various API-related packages in this monorepo.  
+It provides common utilities and helpers that can be reused across different services.
 
 ## Building
 
-Run `nx build api-utils` to build the library.
+To build the library, run:
+
+```bash
+nx build api-utils
+```
 
 ## Running unit tests
 
-Run `nx test api-utils` to execute the unit tests via [Jest](https://jestjs.io).
+To run the unit tests for this library, use:
+
+```bash
+nx test api-utils
+```

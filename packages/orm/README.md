@@ -1,11 +1,21 @@
 # orm
 
-This library was generated with [Nx](https://nx.dev).
+This is a shared library that can be used by all API-related packages in this monorepo.
+
+The library contains submodules that can be imported individually. Each submodule includes the necessary entities, services, and other logic within its own module, ensuring a clear separation of concerns.
 
 ## Building
 
-Run `nx build orm` to build the library.
+To build the library, run:
+
+```bash
+nx build orm
+```
 
 ## Running unit tests
 
-Run `nx test orm` to execute the unit tests via [Jest](https://jestjs.io).
+To run the unit tests for this library, use:
+
+```bash
+nx test orm
+```

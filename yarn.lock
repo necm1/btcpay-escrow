@@ -1456,6 +1456,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@escrow/api-utils@workspace:packages/api-utils":
+  version: 0.0.0-use.local
+  resolution: "@escrow/api-utils@workspace:packages/api-utils"
+  dependencies:
+    tslib: "npm:^2.3.0"
+  languageName: unknown
+  linkType: soft
+
 "@escrow/api@workspace:apps/api":
   version: 0.0.0-use.local
   resolution: "@escrow/api@workspace:apps/api"

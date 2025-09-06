@@ -29,7 +29,7 @@
         ],
         "options": {
           "buildTarget": "@escrow/api:build",
-          "runBuildTargetDependencies": true
+          "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {

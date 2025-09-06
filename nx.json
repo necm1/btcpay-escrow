@@ -72,5 +72,8 @@
   },
   "tui": {
     "enabled": false
+  },
+  "sync": {
+    "applyChanges": true
   }
 }

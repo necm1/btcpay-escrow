@@ -8,8 +8,9 @@ import { LoggerModule } from 'nestjs-pino';
 import { redisStore } from 'cache-manager-redis-yet';
 import { CacheModule } from '@nestjs/cache-manager';
 import { RedisClientOptions } from 'redis';
-import { APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
+import { APP_FILTER, APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
 import { OrmModule } from '@escrow/orm';
+import { HttpExceptionFilter, ResponseInterceptor } from '@escrow/api-utils';
 
 @Module({
   imports: [
@@ -48,6 +49,14 @@ import { OrmModule } from '@escrow/orm';
     {
       provide: APP_INTERCEPTOR,
       useClass: ClassSerializerInterceptor,
+    },
+    {
+      provide: APP_FILTER,
+      useClass: HttpExceptionFilter,
+    },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: ResponseInterceptor,
     },
   ],
 })
